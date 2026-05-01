@@ -89,3 +89,12 @@ Je remplace donc le 4eme octet de l'adresse IP par le multiple du nombre magique
 Adresse Broadcast : **192.168.13.255**
 
 ### Calcul du nombre d'adresses utilisables et la plage d'adresses disponibles
+
+* Pour le nombre d'adresses utilisables:
+
+Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **8**  
+Calcul : 2^8 = 256 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 256-2= **254** adresses utilisables par des machines.  
+
+* Pour la plage d'adresses disponibles:
+
+Elle est donc comprise entre **192.168.13.1** et **192.168.13.255** 
