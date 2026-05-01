@@ -236,4 +236,4 @@ Ici l'octet significatif sur le masque de sous réseau va être le 3eme, soit 25
 Donc mon calcul est 256-254 = **2** (Nombre Magique)  
 
 Les multiples de mon nombre magique sont :  
-**0**, **2**,**4**, **6**, **8**,**...**, **24**, **26**, **28**, **30**,**...**, **254**, **256**.  
+**0**, **2**, **4**, **6**, **8**,**...**, **24**, **26**, **28**, **30**,**...**, **254**, **256**.  
