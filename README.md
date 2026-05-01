@@ -92,12 +92,12 @@ Adresse Broadcast : **192.168.13.255**
 
 * Pour le nombre d'adresses utilisables:
 
-Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **8**  
+Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **8**.  
 Calcul : 2^8 = 256 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 256-2= **254** adresses utilisables par des machines.  
 
 * Pour la plage d'adresses disponibles:
 
-Elle est donc comprise entre **192.168.13.1** et **192.168.13.255** 
+Elle est donc comprise entre **192.168.13.1** et **192.168.13.254**. 
 
 ## 2. 172.16.0.1 – 255.255.255.0
 
@@ -174,9 +174,9 @@ Adresse Broadcast : **172.16.0.255**
 
 * Pour le nombre d'adresses utilisables:
 
-Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **8**  
+Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **8**.  
 Calcul : 2^8 = 256 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 256-2= **254** adresses utilisables par des machines.  
 
 * Pour la plage d'adresses disponibles:
 
-Elle est donc comprise entre **192.168.13.1** et **192.168.13.255**
+Elle est donc comprise entre **172.16.0.1** et **172.16.0.254**.
