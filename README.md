@@ -98,3 +98,55 @@ Calcul : 2^8 = 256 adresses utilisables, moins les 2 réservées à l'adresse r�
 * Pour la plage d'adresses disponibles:
 
 Elle est donc comprise entre **192.168.13.1** et **192.168.13.255** 
+
+## 2. 172.16.0.1 – 255.255.255.0
+
+Adresse IP en Binaire:  
+
+**1010 1100.0001 0000.0000 0000.0000 0001**  
+
+Ici nous avons déjà le masque sous réseau:  
+
+255.255.255.0
+
+Soit en binaire :  
+  
+**1111 1111.1111 1111.1111 1111.0000 0000**  
+  
+Son CIDR est **/24**, soit 24 bits réseau (donc 8 bits pour l’hôte).  
+  
+#### Calcul avec metode ET, OU, NOT Logique
+
+
+Pour trouver l'Adresse Réseau, je fait :  
+
+* Un ET Logique :  
+
+|Adresse IP (en binaire)|1010 1100.0001 0000.0000 0000.0000 0001|
+| :--------------- |:---------------:|
+|**Masque sous réseau**|**1111 1111.1111 1111.1111 1111.0000 0000**|
+|**Adresse réseau**|**1010 1100.0001 0000.0000 0000.0000 0000**|  
+  
+Soit: **172.16.0.0**
+
+Pour trouver l'Adresse Broadcast je fais:  
+
+* Un NOT Logique:  
+
+|Masque sous réseau|1111 1111.1111 1111.1111 1111.0000 0000|
+| :--------------- |:---------------:|
+|**En NOT Logique**|**0000 0000.0000 0000.0000 0000.1111 1111**|  
+
+* Puis un OU Logique, entre le NOT Logique et l'Adresse Réseau:  
+
+|**NOT Logique**|**0000 0000.0000 0000.0000 0000.1111 1111**|
+| :--------------- |:---------------:|
+|**Adresse réseau**|**1010 1100.0001 0000.0000 0000.0000 0000**|
+|**OU Logique**|**1010 1100.0001 0000.0000 0000.1111 1111**|  
+
+Soit: **172.16.0.255**
+
+#### Calcul avec la méthode du "Nombre Magique"  
+
+Adresse IP : **172.16.0.1**  
+Masque s/réseau : **255.255.255.0**
