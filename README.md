@@ -179,4 +179,6 @@ Calcul : 2^8 = 256 adresses utilisables, moins les 2 réservées à l'adresse r�
 
 * Pour la plage d'adresses disponibles:
 
-Elle est donc comprise entre **172.16.0.1** et **172.16.0.254**.
+Elle est donc comprise entre **172.16.0.1** et **172.16.0.254**.  
+
+## 3. 172.16.27.32/23
