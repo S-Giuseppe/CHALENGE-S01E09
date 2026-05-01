@@ -149,4 +149,34 @@ Soit: **172.16.0.255**
 #### Calcul avec la méthode du "Nombre Magique"  
 
 Adresse IP : **172.16.0.1**  
-Masque s/réseau : **255.255.255.0**
+Masque s/réseau : **255.255.255.0**  
+
+Ici l'octet significatif sur le masque de sous réseau va être le 4eme, soit 0.  
+
+Donc mon calcul est 256-0 = **256** (Nombre Magique)  
+
+Les multiples de mon nombre magique sont :  
+**0**, **256**.  
+
+* Pour trouver l'Adresse Réseau:
+
+Je remplace donc le 4eme octet de l'adresse IP par le multiple du nombre magique inférieur ou égal à la valeur de l'octet dans l'adresse, soit par **0**.  
+
+Adresse Réseau : **172.16.0.0**
+
+* Pour trouver l'Adresse Broadcast:
+
+Je remplace donc le 4eme octet de l'adresse IP par le multiple du nombre magique suivant, moins 1, soit 256-1 = **255**
+
+Adresse Broadcast : **172.16.0.255**
+
+### Calcul du nombre d'adresses utilisables et la plage d'adresses disponibles
+
+* Pour le nombre d'adresses utilisables:
+
+Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **8**  
+Calcul : 2^8 = 256 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 256-2= **254** adresses utilisables par des machines.  
+
+* Pour la plage d'adresses disponibles:
+
+Elle est donc comprise entre **192.168.13.1** et **192.168.13.255**
