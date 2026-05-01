@@ -196,4 +196,44 @@ Soit:
 
 **255.255.254.0**
 
-#### - Calcul avec metode ET, OU, NOT Logique
+#### - Calcul avec metode ET, OU, NOT Logique 
+
+Pour trouver l'Adresse Réseau, je fait :  
+
+* Un ET Logique :
+
+|Adresse IP (en binaire)|1010 1100.0001 0000.0001 1011.0010 0000|
+| :--------------- |:---------------:|
+|**Masque sous réseau**|**1111 1111.1111 1111.1111 1110.0000 0000**|
+|**Adresse réseau**|**1010 1100.0001 0000.0001 1010.0000 0000**|
+
+Soit: **172.16.26.0**
+
+Pour trouver l'Adresse Broadcast je fais:  
+
+* Un NOT Logique:  
+
+|Masque sous réseau|1111 1111.1111 1111.1111 1110.0000 0000|
+| :--------------- |:---------------:|
+|**En NOT Logique**|**0000 0000.0000 0000.0000 0001.1111 1111**|  
+
+* Puis un OU Logique, entre le NOT Logique et l'Adresse Réseau:  
+
+|**NOT Logique**|**0000 0000.0000 0000.0000 0001.1111 1111**|
+| :--------------- |:---------------:|
+|**Adresse réseau**|**1010 1100.0001 0000.0001 1010.0000 0000**|
+|**OU Logique**|**1010 1100.0001 0000.0001 1011.1111 1111**|  
+
+Soit: **172.16.27.255**  
+
+#### - Calcul avec la méthode du "Nombre Magique"  
+
+Adresse IP : **172.16.27.32**  
+Masque s/réseau : **255.255.254.0**
+
+Ici l'octet significatif sur le masque de sous réseau va être le 3eme, soit 254.  
+
+Donc mon calcul est 256-254 = **2** (Nombre Magique)  
+
+Les multiples de mon nombre magique sont :  
+**0**, **2**,**4**, **6**, **8**,**...***, **24**, **26**, **28**, **30**,**...**, **254**, **256**.  
