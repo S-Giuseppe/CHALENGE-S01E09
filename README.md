@@ -34,7 +34,7 @@ Soit:
 
 **255.255.255.0**
 
-#### Calcul avec metode ET, OU, NOT Logique
+#### - Calcul avec metode ET, OU, NOT Logique
 
 Pour trouver l'Adresse Réseau, je fait :  
 
@@ -64,7 +64,7 @@ Pour trouver l'Adresse Broadcast je fais:
 
 Soit: **192.168.13.255**  
 
-#### Calcul avec la méthode du "Nombre Magique"  
+#### - Calcul avec la méthode du "Nombre Magique"  
 
 Adresse IP : **192.168.13.67**  
 Masque s/réseau : **255.255.255.0**
@@ -115,7 +115,7 @@ Soit en binaire :
   
 Son CIDR est **/24**, soit 24 bits réseau (donc 8 bits pour l’hôte).  
   
-#### Calcul avec metode ET, OU, NOT Logique
+#### - Calcul avec metode ET, OU, NOT Logique
 
 
 Pour trouver l'Adresse Réseau, je fait :  
@@ -146,7 +146,7 @@ Pour trouver l'Adresse Broadcast je fais:
 
 Soit: **172.16.0.255**
 
-#### Calcul avec la méthode du "Nombre Magique"  
+#### - Calcul avec la méthode du "Nombre Magique"  
 
 Adresse IP : **172.16.0.1**  
 Masque s/réseau : **255.255.255.0**  
@@ -196,4 +196,4 @@ Soit:
 
 **255.255.254.0**
 
-#### Calcul avec metode ET, OU, NOT Logique
+#### - Calcul avec metode ET, OU, NOT Logique
