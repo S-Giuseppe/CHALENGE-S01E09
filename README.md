@@ -181,4 +181,19 @@ Calcul : 2^8 = 256 adresses utilisables, moins les 2 réservées à l'adresse r�
 
 Elle est donc comprise entre **172.16.0.1** et **172.16.0.254**.  
 
-## 3. 172.16.27.32/23
+## 3. 172.16.27.32/23. 
+
+Adresse IP en Binaire: 
+
+**1010 1100.0001 0000.0001 1011.0010 0000**
+
+Je détermine le masque sous réseau:  
+/23 (en CIDR) étant 23 bits réseau (soit 9 bits pour l’hôte), cela donne en notation binaire :
+
+**1111 1111.1111 1111.1111 1110.0000 0000**
+
+Soit:
+
+**255.255.254.0**
+
+#### Calcul avec metode ET, OU, NOT Logique
