@@ -34,7 +34,7 @@ Soit:
 
 **255.255.255.0**
 
-#### - Calcul avec metode ET, OU, NOT Logique
+#### - Calcul avec méthode ET, OU, NOT Logique
 
 Pour trouver l'Adresse Réseau, je fait :  
 
@@ -92,7 +92,7 @@ Adresse Broadcast : **192.168.13.255**
 
 * Pour le nombre d'adresses utilisables:
 
-Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **8**.  
+Je prends le nombre de bits de l'hôte dans l’adresse du masque sous réseau, soit **8**.  
 Calcul : 2^8 = 256 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 256-2= **254** adresses utilisables par des machines.  
 
 * Pour la plage d'adresses disponibles:
@@ -115,10 +115,10 @@ Soit en binaire :
   
 Son CIDR est **/24**, soit 24 bits réseau (donc 8 bits pour l’hôte).  
   
-#### - Calcul avec metode ET, OU, NOT Logique
+#### - Calcul avec méthode ET, OU, NOT Logique
 
 
-Pour trouver l'Adresse Réseau, je fait :  
+Pour trouver l'Adresse Réseau, je fais :  
 
 * Un ET Logique :  
 
@@ -174,7 +174,7 @@ Adresse Broadcast : **172.16.0.255**
 
 * Pour le nombre d'adresses utilisables:
 
-Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **8**.  
+Je prends le nombre de bits de l'hôte dans l’adresse du masque sous réseau, soit **8**.  
 Calcul : 2^8 = 256 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 256-2= **254** adresses utilisables par des machines.  
 
 * Pour la plage d'adresses disponibles:
@@ -196,9 +196,9 @@ Soit:
 
 **255.255.254.0**
 
-#### - Calcul avec metode ET, OU, NOT Logique 
+#### - Calcul avec méthode ET, OU, NOT Logique 
 
-Pour trouver l'Adresse Réseau, je fait :  
+Pour trouver l'Adresse Réseau, je fais :  
 
 * Un ET Logique :
 
@@ -236,7 +236,7 @@ Ici l'octet significatif sur le masque de sous réseau va être le 3eme, soit 25
 Donc mon calcul est 256-254 = **2** (Nombre Magique)  
 
 Les multiples de mon nombre magique sont :  
-**0**, **2**, **4**, **6**, **8**,**...**, **24**, **26**, **28**, **30**,**...**, **254**, **256**.  
+**0**, **2**, **4**, **6**, **8**, **...**, **24**, **26**, **28**, **30**, **...**, **254**, **256**.  
 
 * Pour trouver l'Adresse Réseau:
 
@@ -254,7 +254,7 @@ Adresse Broadcast : **172.16.27.255**
 
 * Pour le nombre d'adresses utilisables:
 
-Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **9**.  
+Je prends le nombre de bits de l'hôte dans l’adresse du masque sous réseau, soit **9**.  
 Calcul : 2^9 = 512 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 512-2= **510** adresses utilisables par des machines.  
 
 * Pour la plage d'adresses disponibles:
@@ -277,10 +277,10 @@ Soit en binaire :
   
 Son CIDR est **/17**, soit 17 bits réseau (donc 15 bits pour l’hôte).  
 
-#### - Calcul avec metode ET, OU, NOT Logique
+#### - Calcul avec méthode ET, OU, NOT Logique
 
 
-Pour trouver l'Adresse Réseau, je fait :  
+Pour trouver l'Adresse Réseau, je fais :  
 
 * Un ET Logique :  
 
@@ -336,7 +336,7 @@ Adresse Broadcast : **10.7.127.255**
 
 * Pour le nombre d'adresses utilisables:
 
-Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **15**.  
+Je prends le nombre de bits de l'hôte dans l’adresse du masque sous réseau, soit **15**.  
 Calcul : 2^15 = 32.768 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 32.768-2= **32.766** adresses utilisables par des machines.  
 
 * Pour la plage d'adresses disponibles:
@@ -358,9 +358,9 @@ Soit:
 
 **255.240.0.0**
 
-#### - Calcul avec metode ET, OU, NOT Logique 
+#### - Calcul avec méthode ET, OU, NOT Logique 
 
-Pour trouver l'Adresse Réseau, je fait :  
+Pour trouver l'Adresse Réseau, je fais :  
 
 * Un ET Logique :
 
@@ -416,7 +416,7 @@ Adresse Broadcast : **10.47.255.255**
 
 * Pour le nombre d'adresses utilisables:
 
-Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **20**.  
+Je prends le nombre de bits de l'hôte dans l’adresse du masque sous réseau, soit **20**.  
 Calcul : 2^20 = 1.048.576 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 1.048.576-2= **1.048.574** adresses utilisables par des machines.  
 
 * Pour la plage d'adresses disponibles:
