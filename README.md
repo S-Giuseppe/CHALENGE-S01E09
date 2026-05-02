@@ -237,3 +237,188 @@ Donc mon calcul est 256-254 = **2** (Nombre Magique)
 
 Les multiples de mon nombre magique sont :  
 **0**, **2**, **4**, **6**, **8**,**...**, **24**, **26**, **28**, **30**,**...**, **254**, **256**.  
+
+* Pour trouver l'Adresse Réseau:
+
+Je remplace donc le 3eme octet de l'adresse IP par le multiple du nombre magique inférieur ou égal à la valeur de l'octet dans l'adresse, soit par **26**. Puis je mets les octets suivants à 0.  
+
+Adresse Réseau : **172.16.26.0**
+
+* Pour trouver l'Adresse Broadcast:
+
+Je remplace donc le 3eme octet de l'adresse IP par le multiple du nombre magique suivant, moins 1, soit 28-1 = **27**. Puis je mets les octets suivants à 255.  
+
+Adresse Broadcast : **172.16.27.255**
+
+### Calcul du nombre d'adresses utilisables et la plage d'adresses disponibles
+
+* Pour le nombre d'adresses utilisables:
+
+Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **9**.  
+Calcul : 2^9 = 512 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 512-2= **510** adresses utilisables par des machines.  
+
+* Pour la plage d'adresses disponibles:
+
+Elle est donc comprise entre **172.16.26.1** et **172.16.27.254**.  
+
+## 4. 10.7.5.1 – 255.255.128.0
+
+Adresse IP en Binaire:  
+
+**0000 1010.0000 0111.0000 0101.0000 0001**  
+
+Ici nous avons déjà le masque sous réseau:  
+
+255.255.128.0
+
+Soit en binaire :  
+  
+**1111 1111.1111 1111.1000 0000.0000 0000**  
+  
+Son CIDR est **/17**, soit 17 bits réseau (donc 15 bits pour l’hôte).  
+
+#### - Calcul avec metode ET, OU, NOT Logique
+
+
+Pour trouver l'Adresse Réseau, je fait :  
+
+* Un ET Logique :  
+
+|Adresse IP (en binaire)|0000 1010.0000 0111.0000 0101.0000 0001|
+| :--------------- |:---------------:|
+|**Masque sous réseau**|**1111 1111.1111 1111.1000 0000.0000 0000**|
+|**Adresse réseau**|**0000 1010.0000 0111.0000 0000.0000 0000**|  
+  
+Soit: **10.7.0.0**
+
+Pour trouver l'Adresse Broadcast je fais:  
+
+* Un NOT Logique:  
+
+|Masque sous réseau|1111 1111.1111 1111.1000 0000.0000 0000|
+| :--------------- |:---------------:|
+|**En NOT Logique**|**0000 0000.0000 0000.0111 1111.1111 1111**|  
+
+* Puis un OU Logique, entre le NOT Logique et l'Adresse Réseau:  
+
+|**NOT Logique**|**0000 0000.0000 0000.0111 1111.1111 1111**|
+| :--------------- |:---------------:|
+|**Adresse réseau**|**0000 1010.0000 0111.0000 0000.0000 0000**|
+|**OU Logique**|**0000 1010.0000 0111.0111 1111.1111 1111**|  
+
+Soit: **10.7.127.255**
+
+#### - Calcul avec la méthode du "Nombre Magique"  
+
+Adresse IP : **10.7.5.1**  
+Masque s/réseau : **255.255.128.0**
+
+Ici l'octet significatif sur le masque de sous réseau va être le 3eme, soit 128.  
+
+Donc mon calcul est 256-128 = **128** (Nombre Magique)  
+
+Les multiples de mon nombre magique sont :  
+**0**, **128**, **256**.  
+
+* Pour trouver l'Adresse Réseau:
+
+Je remplace donc le 3eme octet de l'adresse IP par le multiple du nombre magique inférieur ou égal à la valeur de l'octet dans l'adresse, soit par **0**. Puis je mets les octets suivants à 0.  
+
+Adresse Réseau : **10.7.0.0**
+
+* Pour trouver l'Adresse Broadcast:
+
+Je remplace donc le 3eme octet de l'adresse IP par le multiple du nombre magique suivant, moins 1, soit 128-1 = **127**. Puis je mets les octets suivants à 255.  
+
+Adresse Broadcast : **10.7.127.255**
+
+### Calcul du nombre d'adresses utilisables et la plage d'adresses disponibles
+
+* Pour le nombre d'adresses utilisables:
+
+Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **15**.  
+Calcul : 2^15 = 32.768 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 32.768-2= **32.766** adresses utilisables par des machines.  
+
+* Pour la plage d'adresses disponibles:
+
+Elle est donc comprise entre **10.7.0.1** et **10.7.127.254**.  
+
+## 5. 10.42.0.82/12
+
+Adresse IP en Binaire: 
+
+**0000 1010.0010 1010.0000 0000.0101 0010**
+
+Je détermine le masque sous réseau:  
+/12 (en CIDR) étant 12 bits réseau (soit 20 bits pour l’hôte), cela donne en notation binaire :
+
+**1111 1111.1111 0000.0000 0000.0000 0000**
+
+Soit:
+
+**255.240.0.0**
+
+#### - Calcul avec metode ET, OU, NOT Logique 
+
+Pour trouver l'Adresse Réseau, je fait :  
+
+* Un ET Logique :
+
+|Adresse IP (en binaire)|0000 1010.0010 1010.0000 0000.0101 0010|
+| :--------------- |:---------------:|
+|**Masque sous réseau**|**1111 1111.1111 0000.0000 0000.0000 0000**|
+|**Adresse réseau**|**0000 1010.0010 0000.0000 0000.0000 0000**|
+
+Soit: **10.32.0.0**
+
+Pour trouver l'Adresse Broadcast je fais:  
+
+* Un NOT Logique:  
+
+|Masque sous réseau|1111 1111.1111 0000.0000 0000.0000 0000|
+| :--------------- |:---------------:|
+|**En NOT Logique**|**0000 0000.0000 1111.1111 1111.1111 1111**|  
+
+* Puis un OU Logique, entre le NOT Logique et l'Adresse Réseau:  
+
+|**NOT Logique**|**0000 0000.0000 1111.1111 1111.1111 1111**|
+| :--------------- |:---------------:|
+|**Adresse réseau**|**0000 1010.0010 0000.0000 0000.0000 0000**|
+|**OU Logique**|**0000 1010.0010 1111.1111 1111.1111 1111**|  
+
+Soit: **10.47.255.255**  
+
+#### - Calcul avec la méthode du "Nombre Magique"  
+
+Adresse IP : **10.42.0.82**  
+Masque s/réseau : **255.240.0.0**
+
+Ici l'octet significatif sur le masque de sous réseau va être le 2eme, soit 240.  
+
+Donc mon calcul est 256-240 = **16** (Nombre Magique)  
+
+Les multiples de mon nombre magique sont :  
+**0**, **16**, **32**, **48**, **64**, **...**, **256**.  
+
+* Pour trouver l'Adresse Réseau:
+
+Je remplace donc le 2eme octet de l'adresse IP par le multiple du nombre magique inférieur ou égal à la valeur de l'octet dans l'adresse, soit par **32**. Puis je mets les octets suivants à 0.  
+
+Adresse Réseau : **10.32.0.0**
+
+* Pour trouver l'Adresse Broadcast:
+
+Je remplace donc le 3eme octet de l'adresse IP par le multiple du nombre magique suivant, moins 1, soit 48-1 = **47**. Puis je mets les octets suivants à 255.  
+
+Adresse Broadcast : **10.47.255.255**
+
+### Calcul du nombre d'adresses utilisables et la plage d'adresses disponibles
+
+* Pour le nombre d'adresses utilisables:
+
+Je prends le nombre de bits de l'hote dans mon adresses du masque sous reseau, soit **20**.  
+Calcul : 2^20 = 1.048.576 adresses utilisables, moins les 2 réservées à l'adresse réseau et broadcast = 1.048.576-2= **1.048.574** adresses utilisables par des machines.  
+
+* Pour la plage d'adresses disponibles:
+
+Elle est donc comprise entre **10.32.0.1** et **10.47.255.254**.  
