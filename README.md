@@ -408,7 +408,7 @@ Adresse Réseau : **10.32.0.0**
 
 * Pour trouver l'Adresse Broadcast:
 
-Je remplace donc le 3eme octet de l'adresse IP par le multiple du nombre magique suivant, moins 1, soit 48-1 = **47**. Puis je mets les octets suivants à 255.  
+Je remplace donc le 2eme octet de l'adresse IP par le multiple du nombre magique suivant, moins 1, soit 48-1 = **47**. Puis je mets les octets suivants à 255.  
 
 Adresse Broadcast : **10.47.255.255**
 
